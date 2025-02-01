@@ -6,7 +6,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Show laravel logs
+// Display laravel logs
 Route::get("/log", function () {
-    return response()->file(storage_path("logs/laravel.log"));
+    $file = storage_path("logs/laravel.log");
+    $content = file_get_contents($file);
+    return nl2br($content);
 });
