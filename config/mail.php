@@ -60,6 +60,9 @@ return [
             //     'timeout' => 5,
             // ],
         ],
+        'mailgun' => [
+            'transport' => 'mailgun',
+        ],
 
         'resend' => [
             'transport' => 'resend',
